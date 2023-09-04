@@ -1,0 +1,43 @@
+version: '3.9'
+
+services:
+  nestapp:
+    container_name: backend
+    build: ./BackEnd
+    image: img_backend
+    command: npm run start:prod  # Ruta del archivo JavaScript compilado
+    ports:
+      - "4000:4000"
+    environment:
+      - DB_NAME=postgres
+      - DB_USER=postgres
+      - DB_PASS=12345
+      - DB_HOST=nest_db
+    depends_on:
+      - nest_db
+    restart: always
+
+  nest_db:
+    container_name: nest_db
+    image: postgres:12
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=12345
+    volumes:
+      - nest_db_data:/var/lib/postgresql/data
+
+  front_app:
+    container_name: front_app
+    build: ./FrontEnd
+    image: img_frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - nest_db    
+
+volumes:
+  nest_db_data: {}
+    
