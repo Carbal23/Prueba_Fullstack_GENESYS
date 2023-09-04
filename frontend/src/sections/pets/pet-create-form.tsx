@@ -130,15 +130,12 @@ export default function PetCreateForm({ open, onClose }: Props) {
               options={sexOptions}
               getOptionLabel={(option) => option}
               isOptionEqualToValue={(option, value) => option === value}
-              renderOption={(props, option) => {
-                sexOptions.filter((sex) => sex === option)[0];
-
-                return (
-                  <li {...props} key={option}>
-                    {option}
-                  </li>
-                );
-              }}
+              renderOption={(props, option) => (
+                <li {...props} key={option}>
+                  {' '}
+                  {option}
+                </li>
+              )}
             />
             <RHFAutocomplete
               name="breed"
@@ -146,14 +143,14 @@ export default function PetCreateForm({ open, onClose }: Props) {
               options={breeds}
               getOptionLabel={(option) => (typeof option === 'string' ? option : option.name)}
               isOptionEqualToValue={(option, value) => option === value}
-              renderOption={(props, option) => {
+              renderOption={(props, option) => 
                 // examplebreeds.filter((breed) => breed === option)[0];
-                return (
+                 (
                   <li {...props} key={option.id}>
                     {option.name}
                   </li>
-                );
-              }}
+                )
+              }
               onChange={(event, newValue) => {
                 setSelectedBreed(newValue as IGetBreedPet);
                 methods.setValue('breed', newValue as IGetBreedPet);
@@ -173,13 +170,11 @@ export default function PetCreateForm({ open, onClose }: Props) {
               options={SubBreedOptions}
               getOptionLabel={(option) => (typeof option === 'string' ? option : option.name)}
               isOptionEqualToValue={(option, value) => option === value}
-              renderOption={(props, option) => {
-                return (
-                  <li {...props} key={option.id}>
-                    {option.name}
-                  </li>
-                );
-              }}
+              renderOption={(props, option) => (
+                <li {...props} key={option.id}>
+                  {option.name}
+                </li>
+              )}
               disabled={!selectedBreed}
               onChange={(event, newValue) => {
                 setSelectedSubBreed(newValue as ISubBreedPet);

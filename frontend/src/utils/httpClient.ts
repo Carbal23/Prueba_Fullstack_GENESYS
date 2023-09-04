@@ -4,7 +4,7 @@ import axiosInstance from './axios';
 class HttpClient {
   private axios: AxiosInstance;
 
-  constructor(axiosInstance: AxiosInstance) {
+  constructor() {
     this.axios = axiosInstance;
   }
 
@@ -24,4 +24,4 @@ class HttpClient {
   }
 }
 
-export const httpClient = new HttpClient(axiosInstance);
+export const httpClient = new HttpClient();

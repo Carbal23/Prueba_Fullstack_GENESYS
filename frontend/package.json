@@ -5,9 +5,9 @@
   "description": "Prueba fullstack",
   "private": true,
   "scripts": {
-    "dev": "vite --open",
+    "dev": "vite",
     "build": "tsc && vite build",
-    "start": "tsc && vite build && vite preview",
+    "start": "vite preview --port 3000 ",
     "lint": "eslint \"src/**/*.{js,jsx,ts,tsx}\"",
     "lint:fix": "eslint --fix \"src/**/*.{js,jsx,ts,tsx}\"",
     "prettier": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",

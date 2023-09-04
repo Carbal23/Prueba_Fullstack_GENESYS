@@ -1,13 +1,15 @@
 import { useCallback, useEffect, useMemo, useReducer} from 'react';
 import handleErrorMessage from 'src/context/utils/handleErrorMessage';
 import { endpoints} from 'src/utils/axios';
-import { PetsContext } from './petsContext';
-import { IAddPet, IPet } from '../types';
 import { useSnackbar } from 'src/components/snackbar';
 import { useActiveLink } from 'src/routes/hooks';
 import { httpClient } from 'src/utils/httpClient';
+import { PetsContext } from './petsContext'
+import { IAddPet, IPet } from '../types';
 import reducer, { Types } from './petsReducer';
 import { initialState } from '../initialState';
+
+;
 
 type Props = {
   children: React.ReactElement;

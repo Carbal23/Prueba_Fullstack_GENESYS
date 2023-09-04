@@ -5,7 +5,7 @@ services:
     container_name: backend
     build: ./BackEnd
     image: img_backend
-    command: npm run start:prod  # Ruta del archivo JavaScript compilado
+    command: npm run start:prod # Ruta del archivo JavaScript compilado
     ports:
       - "4000:4000"
     environment:
@@ -36,8 +36,7 @@ services:
     ports:
       - "3000:3000"
     depends_on:
-      - nest_db    
+      - nest_db
 
 volumes:
   nest_db_data: {}
-    

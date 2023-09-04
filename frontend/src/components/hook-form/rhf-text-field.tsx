@@ -24,7 +24,7 @@ export default function RHFTextField({ name, readOnlyProp, helperText, type, ...
           value={type === 'number' && field.value === 0 ? '' : field.value}
           onChange={(event) => {
             if (type === 'number') {
-              field.onChange(Number(event.target.value));
+              field.onChange((event.target.value));
             } else {
               field.onChange(event.target.value);
             }
@@ -32,7 +32,7 @@ export default function RHFTextField({ name, readOnlyProp, helperText, type, ...
           error={!!error}
           helperText={error ? error?.message : helperText}
           InputProps={{
-            readOnly: readOnlyProp? true : false,
+            readOnly: readOnlyProp,
           }}
           
           {...other}
