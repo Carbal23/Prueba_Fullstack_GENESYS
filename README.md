@@ -1,4 +1,4 @@
-# Prueba Full Stack CMPC-Dogs - Documentación
+# Prueba Fullstack CMPC-Dogs - Documentación
 Este repositorio contiene el código fuente de la prueba Full Stack desarrollado con NestJS, React y TypeScript. El proyecto incluye una aplicación backend y una aplicación frontend que se comunican entre sí para proporcionar una experiencia de usuario completa.
 
 La tienda CMPC-Dogs busca modernizar sus procesos de inventario para un mejor control de las mascotas disponibles. Para abordar este desafío, se necesita una aplicación web que permita listar y filtrar las mascotas por raza y subraza.
@@ -95,6 +95,6 @@ docker-compose up
 
 Una vez que los contenedores se hayan iniciado, el backend estará disponible en http://localhost:4000 y el frontend en http://localhost:3000.
 
-Con esto, tendrás el proyecto Full Stack DVP completamente levantado y listo para ser utilizado.
+Con esto, tendrás el proyecto Fullstack CMPC-Dogs completamente levantado y listo para ser utilizado.
 
 ¡Gracias por revisar la documentación del proyecto! Si tienes alguna pregunta o necesitas más información, no dudes en contactarme.
